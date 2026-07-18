@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>APEX Dream Come True OS — Draft Prototype</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, sans-serif; margin: 0; background: #0f172a; color: #f8fafc; }
+    main { max-width: 960px; margin: auto; padding: 28px; }
+    .card { background: #111827; border: 1px solid #334155; border-radius: 18px; padding: 20px; margin: 16px 0; }
+    .badge { display:inline-block; padding:6px 10px; border:1px solid #64748b; border-radius:999px; margin:4px; }
+    button { padding: 12px 16px; border-radius: 12px; border: 0; cursor: pointer; font-weight: 700; }
+    input { width: 100%; min-height: 48px; border-radius: 12px; border:1px solid #475569; padding: 12px; background:#020617; color:#f8fafc; box-sizing:border-box; }
+    pre { white-space: pre-wrap; background:#020617; padding:16px; border-radius:12px; overflow:auto; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>APEX Dream Come True OS</h1>
+  <p>Draft local prototype. No external sending. No deployment. No validation claim.</p>
+  <div class="card">
+    <span class="badge">NO-SEND</span>
+    <span class="badge">CONSENT REQUIRED</span>
+    <span class="badge">REVIEW REQUIRED</span>
+    <span class="badge">NOT VALIDATED</span>
+  </div>
+  <div class="card">
+    <h2>Tell me your dream</h2>
+    <input id="dream" value="I want to visit the Denver Broncos" />
+    <button onclick="build()">Build opportunity pathway</button>
+  </div>
+  <div class="card">
+    <h2>Generated Pathway</h2>
+    <pre id="out">Waiting for dream input...</pre>
+  </div>
+</main>
+<script>
+function build(){
+  const dream = document.getElementById('dream').value.trim();
+  const result = {
+    dream,
+    truth_status: 'USER_STATED / GENERATED_DRAFT / NOT_SUBMITTED',
+    first_step: 'Create a privacy-safe dream card and ask an authorized adult to review.',
+    swot: {
+      strengths: ['Clear emotional dream', 'Can create respectful story packet'],
+      weaknesses: ['No verified organization eligibility yet', 'Needs approval'],
+      opportunities: ['Official team/community request research', 'foundation research', 'local community support'],
+      threats: ['Privacy exposure', 'false hope', 'unverified contacts', 'emotional disappointment']
+    },
+    approval_gate: 'No external outreach, sharing, or representation without explicit approval.',
+    outreach_status: 'BLOCKED_BY_DEFAULT'
+  };
+  document.getElementById('out').textContent = JSON.stringify(result, null, 2);
+}
+</script>
+</body>
+</html>
