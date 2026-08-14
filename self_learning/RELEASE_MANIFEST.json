@@ -1,0 +1,11 @@
+{
+  "current_version": "0.31.0",
+  "base_version": "0.7.0",
+  "latest_version": "0.31",
+  "verification": {"tests_run": 99, "tests_passed": 99, "python_compile": "PASS", "integrated_demo": "PASS"},
+  "release_range": "v0.8-v0.31",
+  "governed_autonomy_path": ["UNDERSTAND", "COMPARE", "JUDGE", "AUTHORIZE", "CHANGE", "CANARY", "VERIFY"],
+  "control_plane_self_modification": "FORBIDDEN",
+  "source_archive": "apex_self_learning_v0_31.zip",
+  "source_archive_sha256": "7643e4f73ab63376930f5ec8fe8be97be865c784796886a6933b05136141f81e"
+}
